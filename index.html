@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Chosen Palette: Slate & Indigo Professional -->
     <!-- Application Structure Plan: 
@@ -25,20 +27,50 @@
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <style>
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8fafc; color: #0f172a; }
-        .chart-container { position: relative; width: 100%; max-width: 500px; margin: 0 auto; height: 300px; max-height: 400px; }
-        .card-hover { transition: all 0.2s ease-in-out; }
-        .card-hover:hover { transform: translateY(-3px); box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1); }
-        .tag { display: inline-block; padding: 0.15rem 0.5rem; font-size: 0.7rem; border-radius: 4px; font-weight: 500; margin-right: 0.25rem; margin-bottom: 0.25rem; }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            height: 300px;
+            max-height: 400px;
+        }
+
+        .card-hover {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            font-weight: 500;
+            margin-right: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
     </style>
 </head>
+
 <body class="antialiased min-h-screen flex flex-col">
 
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <i class="fas fa-route text-indigo-600 text-2xl"></i>
-                <h1 class="text-xl font-bold tracking-tight text-slate-800">모빌리티 경쟁 분석 <span class="text-slate-400 font-normal text-sm ml-2 hidden sm:inline">Portal</span></h1>
+                <h1 class="text-xl font-bold tracking-tight text-slate-800">모빌리티 경쟁 분석 <span
+                        class="text-slate-400 font-normal text-sm ml-2 hidden sm:inline">Portal</span></h1>
             </div>
             <div class="flex gap-6 text-sm font-semibold">
                 <a href="#overview" class="text-slate-600 hover:text-indigo-600 transition-colors">인사이트</a>
@@ -51,10 +83,12 @@
 
         <!-- Intro Section -->
         <section id="overview" class="space-y-8">
-            <div class="bg-indigo-900 rounded-3xl p-8 md:p-12 text-white shadow-xl flex flex-col md:flex-row justify-between items-center gap-8">
+            <div
+                class="bg-indigo-900 rounded-3xl p-8 md:p-12 text-white shadow-xl flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="max-w-xl space-y-4">
                     <h2 class="text-3xl md:text-4xl font-bold">국내 모빌리티 셔틀 시장 <br class="hidden md:block">완벽 가이드</h2>
-                    <p class="text-indigo-100 text-lg">전통적인 통합 관제 시스템부터 최신 수요응답형(DRT) 플랫폼까지, 35개 이상의 주요 경쟁사를 한눈에 파악하고 웹사이트를 직접 방문해 보세요.</p>
+                    <p class="text-indigo-100 text-lg">전통적인 통합 관제 시스템부터 최신 수요응답형(DRT) 플랫폼까지, 35개 이상의 주요 경쟁사를 한눈에 파악하고
+                        웹사이트를 직접 방문해 보세요.</p>
                 </div>
                 <div class="grid grid-cols-2 gap-4 w-full md:w-auto">
                     <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl text-center">
@@ -84,16 +118,31 @@
                     <h3 class="text-xl font-bold text-slate-800 mb-2">시장 핵심 인사이트</h3>
                     <div class="space-y-4">
                         <div class="flex gap-4">
-                            <div class="w-10 h-10 shrink-0 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600"><i class="fas fa-shield-alt"></i></div>
-                            <div><p class="text-sm font-bold">안전 규제 강화</p><p class="text-xs text-slate-500 mt-1">어린이 통학 차량 등 법적 안전 장치 의무화로 인한 전문 솔루션 수요 급증</p></div>
+                            <div
+                                class="w-10 h-10 shrink-0 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
+                                <i class="fas fa-shield-alt"></i></div>
+                            <div>
+                                <p class="text-sm font-bold">안전 규제 강화</p>
+                                <p class="text-xs text-slate-500 mt-1">어린이 통학 차량 등 법적 안전 장치 의무화로 인한 전문 솔루션 수요 급증</p>
+                            </div>
                         </div>
                         <div class="flex gap-4">
-                            <div class="w-10 h-10 shrink-0 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600"><i class="fas fa-bolt"></i></div>
-                            <div><p class="text-sm font-bold">AI 최적화 경쟁</p><p class="text-xs text-slate-500 mt-1">단순 관제를 넘어 AI 기반 노선 최적화 및 배차 자동화가 차별화 포인트</p></div>
+                            <div
+                                class="w-10 h-10 shrink-0 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600">
+                                <i class="fas fa-bolt"></i></div>
+                            <div>
+                                <p class="text-sm font-bold">AI 최적화 경쟁</p>
+                                <p class="text-xs text-slate-500 mt-1">단순 관제를 넘어 AI 기반 노선 최적화 및 배차 자동화가 차별화 포인트</p>
+                            </div>
                         </div>
                         <div class="flex gap-4">
-                            <div class="w-10 h-10 shrink-0 bg-amber-100 rounded-lg flex items-center justify-center text-amber-600"><i class="fas fa-handshake"></i></div>
-                            <div><p class="text-sm font-bold">대형 플랫폼의 확장</p><p class="text-xs text-slate-500 mt-1">카카오, 타다 등 B2C 거물들의 B2B 셔틀 시장 공격적 진출 중</p></div>
+                            <div
+                                class="w-10 h-10 shrink-0 bg-amber-100 rounded-lg flex items-center justify-center text-amber-600">
+                                <i class="fas fa-handshake"></i></div>
+                            <div>
+                                <p class="text-sm font-bold">대형 플랫폼의 확장</p>
+                                <p class="text-xs text-slate-500 mt-1">카카오, 타다 등 B2C 거물들의 B2B 셔틀 시장 공격적 진출 중</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -109,7 +158,7 @@
                 </div>
                 <div class="w-full md:w-72 relative">
                     <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                    <input type="text" id="searchInput" placeholder="기업명, 서비스, 태그 검색..." 
+                    <input type="text" id="searchInput" placeholder="기업명, 서비스, 태그 검색..."
                         class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 outline-none shadow-sm transition-all">
                 </div>
             </div>
@@ -118,7 +167,8 @@
                 <!-- Filters will be injected here -->
             </div>
 
-            <div id="competitor-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-h-[400px]">
+            <div id="competitor-grid"
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-h-[400px]">
                 <!-- Cards will be injected here -->
             </div>
         </section>
@@ -133,11 +183,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
                 <div class="space-y-2">
                     <label class="text-xs font-bold text-slate-500 uppercase">대상 기업 A</label>
-                    <select id="select-a" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white outline-none focus:ring-2 focus:ring-indigo-500"></select>
+                    <select id="select-a"
+                        class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white outline-none focus:ring-2 focus:ring-indigo-500"></select>
                 </div>
                 <div class="space-y-2">
                     <label class="text-xs font-bold text-slate-500 uppercase">대상 기업 B</label>
-                    <select id="select-b" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white outline-none focus:ring-2 focus:ring-indigo-500"></select>
+                    <select id="select-b"
+                        class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white outline-none focus:ring-2 focus:ring-indigo-500"></select>
                 </div>
             </div>
 
@@ -160,7 +212,8 @@
                     <div id="comp-link-b" class="pt-4"></div>
                 </div>
             </div>
-            <div id="compare-placeholder" class="text-center py-12 text-slate-600 border-2 border-dashed border-slate-800 rounded-2xl">
+            <div id="compare-placeholder"
+                class="text-center py-12 text-slate-600 border-2 border-dashed border-slate-800 rounded-2xl">
                 비교할 두 기업을 선택하면 상세 정보가 나타납니다.
             </div>
         </section>
@@ -169,7 +222,8 @@
 
     <footer class="bg-white border-t border-slate-200 py-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-slate-400 text-sm">&copy; 2024 Mobility Market Intelligence Portal. 모든 정보는 분석 목적으로만 활용됩니다.</p>
+            <p class="text-slate-400 text-sm">&copy; 2024 Mobility Market Intelligence Portal. 모든 정보는 분석 목적으로만 활용됩니다.
+            </p>
         </div>
     </footer>
 
@@ -197,7 +251,7 @@
             { name: "옐로우버스(리버스랩)", category: "키즈/안전", type: "플랫폼", tags: ["학원순환", "동승자"], url: "https://yellowbus.io" },
             { name: "네버스쿨(Nebuschool)", category: "키즈/안전", type: "SaaS", tags: ["학원관리", "셔틀노선"], url: "https://www.triphos.co.kr" },
             { name: "셔틀메이트", category: "통근/통학 솔루션", type: "SaaS", tags: ["운수사관리", "자동배차"], url: "https://m.shuttle-mate.com" },
-            { name: "플랫홈(FLAT)", category: "테크/기타", type: "솔루션", tags: ["기능확장", "통합운송"], url: "http://www.plathome.co.kr" },
+            { name: "플랫홈(FLAT)", category: "테크/기타", type: "솔루션", tags: ["기능확장", "통합운송"], url: "https://www.uic.me/index" },
             { name: "씨엘모빌리티", category: "B2B 모빌리티", type: "DRT", tags: ["MOD", "수요응답", "지자체"], url: "https://www.ciel.co.kr" },
             { name: "위즈돔", category: "B2B 모빌리티", type: "운영/IT", tags: ["AIBOS", "e버스", "통근"], url: "https://www.wizdome.co.kr" },
             { name: "에이아이네트웍스", category: "테크/기타", type: "AI연구", tags: ["모빌리티AI", "데이터분석"], url: "http://ainetwork.co.kr/main" },
@@ -231,7 +285,7 @@
         function renderFilters() {
             const container = document.getElementById('filter-container');
             const cats = ['all', ...new Set(competitors.map(c => c.category))];
-            
+
             container.innerHTML = cats.map(cat => `
                 <button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium transition-all ${cat === 'all' ? 'bg-indigo-600 text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}" data-filter="${cat}">
                     ${cat === 'all' ? '전체 보기' : cat}
@@ -317,7 +371,7 @@
             const view = document.getElementById('compare-view');
             const placeholder = document.getElementById('compare-placeholder');
 
-            if(nameA && nameB) {
+            if (nameA && nameB) {
                 const a = competitors.find(c => c.name === nameA);
                 const b = competitors.find(c => c.name === nameB);
 
@@ -327,7 +381,7 @@
                 document.getElementById('comp-cat-b').textContent = b.category;
                 document.getElementById('comp-type-a').textContent = a.type;
                 document.getElementById('comp-type-b').textContent = b.type;
-                
+
                 document.getElementById('comp-link-a').innerHTML = `<a href="${a.url || getSearchUrl(a.name)}" target="_blank" class="text-indigo-400 hover:text-indigo-300 underline text-sm">링크 이동</a>`;
                 document.getElementById('comp-link-b').innerHTML = `<a href="${b.url || getSearchUrl(b.name)}" target="_blank" class="text-indigo-400 hover:text-indigo-300 underline text-sm">링크 이동</a>`;
 
@@ -367,4 +421,5 @@
         window.onload = init;
     </script>
 </body>
+
 </html>
